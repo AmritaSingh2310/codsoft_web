@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Board</title>
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 0px; /* Prevents content from being hidden under the navbar */
+}
+
+header {
+    background: #202020;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 60px;
+   z-index: 1000; 
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    position: absolute;
+    left: 20px; /* Buttons ko right side par le jaane ke liye */
+    gap: 15px;
+}
+
+#logo {
+    height: 30px; /* Logo ko chhota kiya (pehle 40px tha) */
+    margin-right: 8px;
+}
+
+.nav-left h1 {
+    font-size: 15px; /* Job Board text ko chhota kiya */
+    font-weight: normal; /* Optional: Bold hatana ho toh */
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.nav-right {
+    top: 5px;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    position: absolute;
+    right: 20px; /* Buttons ko right side par le jaane ke liye */
+    gap: 15px;
+}
+#login-btn {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 4px 8px;
+    transition: 0.3s;
+}
+
+#login-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+#post-btn {
+    padding: 8px 12px;
+    border: none;
+    background: #ff6600;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#post-btn:hover {
+    background: #7a3402;
+}
+
+.image{
+    width: 100%;
+    height: 590px;
+}
+
+//* Ensure parent container is positioned properly */
+.hero-section {
+    position: relative; /* Relative positioning for text and button */
+    height: 100vh; /* Full screen height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white; /* White text for better visibility */
+}
+
+/* Center the text and button over the image */
+.hero-content {
+    position: absolute; /* Absolute position to overlay on the image */
+    top: 200px;
+    left: 50%;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: translate(-50%, -50%); /* Centering trick */
+    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay for better readability */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Style the button below the text */
+.hero-btn {
+    padding: 10px 20px;
+    background: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    background: #7a3402;
+}
+
+#resume-btn {
+    padding: 15px 22px;
+    border: none;
+    background: #ff6600;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    position: absolute;
+    right: 20px;
+}
+
+#resume-btn:hover {
+    background: #7a3402;
+}
+
+</style>
+<body>
+    <header>
+        <div class="nav-left">
+            <img id="logo" src="C:\Users\1802a\Downloads\search-2911.png" alt="Job Board Logo">
+            <h1>Job Board</h1>
+        </div>
+    <div class="nav">
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Browse Jobs</a></li>
+                <li><a href="">Pages</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <a href="#" id="login-btn">Log In</a>
+        <button id="post-btn">Post</button>
+    
+    </div>
+</header>
+    <div class="image">
+       <img class="image" src="C:\Users\1802a\Downloads\jobSearch.jpg" alt="">
+    </div>
+<main class="hero-section">
+    <div class="hero-content">
+        <h3>4536 Jobs listed</h3>
+        <h1>Find Your Dream Job</h1>
+        <p>We provide online instant cash loans with quick approval that suit your term length.</p>
+    
+        <button class="hero-btn">Upload your Resume</button>
+    </div>
+    </main>
+    <button id="resume-btn">Find Job</button>
+</body>
+</html>
